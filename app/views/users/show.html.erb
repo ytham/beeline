@@ -1,14 +1,14 @@
 <%= render 'header' %>
 
 <div class="activity">
-  <h1>BRUNCH</h1>
+  <h1>DINING</h1>
   <div class="horizontal_section">
-    <% brunch = @all_activities.select { |s| s.activity_type == "brunch" } %>
-    <% brunch.each do |a| %>
+    <% dining = @all_activities.select { |s| s.activity_type == "dining" } %>
+    <% dining.each do |a| %>
       <%= link_to a do %>
         <div class="activity_box">
           <div class="activity_image"><%= image_tag a.image %></div>
-          <div class="info_overlay"><%= a.name %></div>
+          <div class="info_overlay"><%= a.name %> (<%= a.distance %>)</div>
         </div>
       <% end %>
     <% end %>
@@ -16,25 +16,18 @@
 </div>
 
 <div class="activity">
-    <h1>DAYCLUBS</h1>
-    <div class="horizontal_section">
-      <% dayclubs = @all_activities.select { |s| s.activity_type == "dayclub" } %>
-      <div class="activity_image"><%= image_tag '/assets/restaurant1.jpg' %><div class="info_overlay"></div></div>
-      <div class="activity_image"><%= image_tag '/assets/restaurant2.jpg' %></div>
-      <div class="activity_image"><%= image_tag '/assets/restaurant3.jpg' %></div>
-      <div class="activity_image"><%= image_tag '/assets/restaurant4.jpg' %></div>
-    </div>
-</div>
-
-<div class="activity">
   <div class="small-12 large-12 columns large-centered">
-    <h1>DINNER</h1>
+    <h1>SHOWS</h1>
     <div class="horizontal_section">
-      <% dinner = @all_activities.select { |s| s.activity_type == "dinner" } %>
-      <div class="activity_image"><%= image_tag '/assets/restaurant1.jpg' %></div>
-      <div class="activity_image"><%= image_tag '/assets/restaurant2.jpg' %></div>
-      <div class="activity_image"><%= image_tag '/assets/restaurant3.jpg' %></div>
-      <div class="activity_image"><%= image_tag '/assets/restaurant4.jpg' %></div>
+      <% shows = @all_activities.select { |s| s.activity_type == "show" } %>
+      <% shows.each do |a| %>
+        <%= link_to a do %>
+          <div class="activity_box">
+            <div class="activity_image"><%= image_tag a.image %></div>
+            <div class="info_overlay"><%= a.name %> (<%= a.distance %>)</div>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
@@ -44,10 +37,48 @@
     <h1>NIGHTCLUBS</h1>
     <div class="horizontal_section">
       <% nightclubs = @all_activities.select { |s| s.activity_type == "nightclub" } %>
-      <div class="activity_image"><%= image_tag '/assets/restaurant1.jpg' %></div>
-      <div class="activity_image"><%= image_tag '/assets/restaurant2.jpg' %></div>
-      <div class="activity_image"><%= image_tag '/assets/restaurant3.jpg' %></div>
-      <div class="activity_image"><%= image_tag '/assets/restaurant4.jpg' %></div>
+      <% nightclubs.each do |a| %>
+        <%= link_to a do %>
+          <div class="activity_box">
+            <div class="activity_image"><%= image_tag a.image %></div>
+            <div class="info_overlay"><%= a.name %> (<%= a.distance %>)</div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="activity">
+  <div class="small-12 large-12 columns large-centered">
+    <h1>CASINOS</h1>
+    <div class="horizontal_section">
+      <% casinos = @all_activities.select { |s| s.activity_type == "casino" } %>
+      <% casinos.each do |a| %>
+        <%= link_to a do %>
+          <div class="activity_box">
+            <div class="activity_image"><%= image_tag a.image %></div>
+            <div class="info_overlay"><%= a.name %> (<%= a.distance %>)</div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="activity">
+  <div class="small-12 large-12 columns large-centered">
+    <h1>DAYCLUBS</h1>
+    <div class="horizontal_section">
+      <% dayclubs = @all_activities.select { |s| s.activity_type == "dayclub" } %>
+      <% dayclubs.each do |a| %>
+        <%= link_to a do %>
+          <div class="activity_box">
+            <div class="activity_image"><%= image_tag a.image %></div>
+            <div class="info_overlay"><%= a.name %> (<%= a.distance %>)</div>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
