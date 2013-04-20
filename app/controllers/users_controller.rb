@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
   def show
-    if current_user
-      @user = current_user
+    @user = User.find(params[:id])
+    if current_user == @user
       @all_activities = Activity.all
       respond_to do |format|
         format.html
