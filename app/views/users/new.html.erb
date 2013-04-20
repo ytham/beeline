@@ -1,5 +1,7 @@
 <div class="login_screen">
-<%= image_tag '/assets/wheat_bg.jpg', class: "splash_bg" %>
+<%= link_to "/auth/facebook", id: "sign_in" do %>
+  <%= image_tag '/assets/wheat_bg.jpg', class: "splash_bg" %>
+<% end %>
   <% if !current_user %>
     <div class="login_logo">
       <center><b><font size="+3"><h1><font color="#FFFF00">BEE</font><font color="#ffffff">LINE</font></h1></font></b></center>
