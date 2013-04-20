@@ -43,6 +43,53 @@ div {
 	padding-right: 10px;
 }
 
+.imageheader {
+	display: inline-block;
+	background-color: #222222;
+	width: 100%;
+	height: 30px;
+	padding: 0px;
+	padding-top: 6px;
+	margin: 0px;
+}
+
+
+/* login screen */
+
+.login_screen {
+	background: #fff url(/assets/wheat_bg.jpg) no-repeat 0 0;
+	width: 100%;	
+	height: 100%;
+	display: inline-block;
+}
+
+.login_logo {
+	position:fixed;
+  top: 40%;
+  left: 50%;
+  margin-top: -11px;
+  margin-left: -138px;
+  z-index: 11;
+}
+
+.login_fb {
+	position:fixed;
+  top: 55%;
+  left: 50%;
+  height: 22px;
+  width: 154px;
+  margin-top: -11px;
+  margin-left: -77px;
+  z-index: 10;
+}
+
+.splash_bg {
+	height: 100%;
+	width: 150%;
+	max-width: none;
+	max-height: none;
+	z-index: -10;
+}
 
 /* activity content */
 

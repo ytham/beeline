@@ -1,6 +1,11 @@
-Welcome to Beeline
-<div id="user_nav">
+<div class="login_screen">
+<%= image_tag '/assets/wheat_bg.jpg', class: "splash_bg" %>
   <% if !current_user %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+    <div class="login_logo">
+      <center><b><font size="+3"><h1><font color="#FFFF00">BEE</font><font color="#ffffff">LINE</font></h1></font></b></center>
+    </div>
+    <%= link_to "/auth/facebook", id: "sign_in" do %>
+      <%= image_tag '/assets/fblogin.png', class: "login_fb" %>
+    <% end %>
   <% end %>
 </div>
