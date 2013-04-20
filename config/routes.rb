@@ -1,15 +1,16 @@
 Beeline::Application.routes.draw do
+  match 'auth/:provider/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+
+  resources :activities
   resources :reservations
-
-
   resources :customers
-
-
   resources :nightclubs
-
-
   resources :restaurants
-
+  resources :users
+  
+  root to: "reservations#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

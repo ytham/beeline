@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420081454) do
+ActiveRecord::Schema.define(:version => 20130420113653) do
+
+  create_table "activities", :force => true do |t|
+    t.string   "type"
+    t.string   "image"
+    t.string   "name"
+    t.string   "location"
+    t.string   "time"
+    t.text     "description"
+    t.integer  "price"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "customers", :force => true do |t|
     t.string   "name"
@@ -42,6 +54,16 @@ ActiveRecord::Schema.define(:version => 20130420081454) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
 end
