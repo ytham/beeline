@@ -1,7 +1,7 @@
 Welcome to Beeline
 <div id="user_nav">
   <% if current_user %>
-    <% redirect_to show_path %>
+    <% redirect_to current_user %>
   <% else %>
     <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
   <% end %>
