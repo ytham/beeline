@@ -1,6 +1,6 @@
 <div class="image_header">
   <div class="header_info">
-    <small><%= link_to "Back", current_user %></small>
+    <%= link_to "Back", current_user %>
   </div>
 </div>
 
@@ -8,7 +8,7 @@
 
 <div class="description">
 <h1><span class="pull-left"><%= @activity.name %></span></h1>
-<span class="subheader"><%= @activity.location %> <font color="#888888">(<%= @activity.distance %> miles away)</font></span>
+<span class="subheader"><%= @activity.location %> (<%= @activity.distance %> miles away)</span>
 <p>Time: <%= @activity.time %></p>
 
 <p><%= @activity.description %></p>
