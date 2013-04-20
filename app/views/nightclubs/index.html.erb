@@ -1,0 +1,31 @@
+<h1>Listing nightclubs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Rating</th>
+    <th>Image</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nightclubs.each do |nightclub| %>
+  <tr>
+    <td><%= nightclub.name %></td>
+    <td><%= nightclub.location %></td>
+    <td><%= nightclub.rating %></td>
+    <td><%= nightclub.image %></td>
+    <td><%= nightclub.description %></td>
+    <td><%= link_to 'Show', nightclub %></td>
+    <td><%= link_to 'Edit', edit_nightclub_path(nightclub) %></td>
+    <td><%= link_to 'Destroy', nightclub, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Nightclub', new_nightclub_path %>

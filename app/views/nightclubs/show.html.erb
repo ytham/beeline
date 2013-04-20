@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @nightclub.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @nightclub.location %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @nightclub.rating %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @nightclub.image %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @nightclub.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_nightclub_path(@nightclub) %> |
+<%= link_to 'Back', nightclubs_path %>
