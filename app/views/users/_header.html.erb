@@ -1,0 +1,9 @@
+<div class="header">
+  <div class="header_info">
+    <%= link_to current_user.name, current_user %>
+    <small><%= link_to "Sign out", signout_path, id: "sign_out" %></small>
+  </div>
+  <div class="header_my_activities">
+    <%= link_to "My Vouchers", my_vouchers_path %>
+  </div>
+</div>

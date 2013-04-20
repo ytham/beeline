@@ -18,11 +18,8 @@ class UsersController < ApplicationController
     end
   end
 
-  def create
-  end
-
   def list
-    @activities = current_user.activities.all
+    @all_carts = current_user.carts.all
   end
 
 end

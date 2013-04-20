@@ -1,17 +1,12 @@
 <%= image_tag @activity.image %>
 
+<div class="description">
 <h1><span class="pull-left"><%= @activity.name %></span></h1>
 <span class="subheader"><%= @activity.location %></span>
-
-<p>
-  <b>Time:</b>
-  <%= @activity.time %>
-</p>
+<p>Time: <%= @activity.time %></p>
 
 <p><%= @activity.description %></p>
 
-<center>
-<h2>$<%= @activity.price %></h2>
+</div>
 
-<p>[Buy button]</p>
-</center>
+<%= render 'carts/cartbutton' %>

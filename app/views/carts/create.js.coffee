@@ -1,0 +1,1 @@
+$(".cartbutton_wrapper").html "<%= escape_javascript(render 'carts/cartbutton') %>"

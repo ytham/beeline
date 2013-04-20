@@ -1,14 +1,20 @@
 Beeline::Application.routes.draw do
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
+  match 'carts/create', to: 'carts#create', as: :carts
   match 'signout', to: 'sessions#destroy', as: 'signout'
+  match '/my_vouchers', to: 'users#list'
 
   resources :activities
   resources :reservations
   resources :customers
   resources :nightclubs
   resources :restaurants
-  resources :users
+  resources :users do
+    collection do
+      get :list
+    end
+  end
   
   root to: "users#new"
 

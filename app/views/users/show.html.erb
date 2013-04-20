@@ -1,27 +1,25 @@
-<div class="row">
-  <div class="small-6 large-6 columns">
-    <%= current_user.name %>
-    <small><%= link_to "Sign out", signout_path, id: "sign_out" %></small>
-  </div>
-  <div class="small-6 large-6 columns right">
-    <%= link_to "My Activities", '#' %>
-  </div>
-</div>
+<%= render 'header' %>
 
 <div class="activity">
-  <h1>Brunch</h1>
+  <h1>BRUNCH</h1>
   <div class="horizontal_section">
     <% brunch = @all_activities.select { |s| s.activity_type == "brunch" } %>
     <% brunch.each do |a| %>
-      <div class="activity_image"><%= link_to a do %><%= image_tag a.image %><% end %></div>
+      <%= link_to a do %>
+        <div class="activity_box">
+          <div class="activity_image"><%= image_tag a.image %></div>
+          <div class="info_overlay"><%= a.name %></div>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
 
 <div class="activity">
-    <h1>Dayclubs</h1>
+    <h1>DAYCLUBS</h1>
     <div class="horizontal_section">
-      <div class="activity_image"><%= image_tag '/assets/restaurant1.jpg' %></div>
+      <% dayclubs = @all_activities.select { |s| s.activity_type == "dayclub" } %>
+      <div class="activity_image"><%= image_tag '/assets/restaurant1.jpg' %><div class="info_overlay"></div></div>
       <div class="activity_image"><%= image_tag '/assets/restaurant2.jpg' %></div>
       <div class="activity_image"><%= image_tag '/assets/restaurant3.jpg' %></div>
       <div class="activity_image"><%= image_tag '/assets/restaurant4.jpg' %></div>
@@ -30,8 +28,9 @@
 
 <div class="activity">
   <div class="small-12 large-12 columns large-centered">
-    <h1>Dinner</h1>
+    <h1>DINNER</h1>
     <div class="horizontal_section">
+      <% dinner = @all_activities.select { |s| s.activity_type == "dinner" } %>
       <div class="activity_image"><%= image_tag '/assets/restaurant1.jpg' %></div>
       <div class="activity_image"><%= image_tag '/assets/restaurant2.jpg' %></div>
       <div class="activity_image"><%= image_tag '/assets/restaurant3.jpg' %></div>
@@ -42,8 +41,9 @@
 
 <div class="activity">
   <div class="small-12 large-12 columns large-centered">
-    <h1>Nightclubs</h1>
+    <h1>NIGHTCLUBS</h1>
     <div class="horizontal_section">
+      <% nightclubs = @all_activities.select { |s| s.activity_type == "nightclub" } %>
       <div class="activity_image"><%= image_tag '/assets/restaurant1.jpg' %></div>
       <div class="activity_image"><%= image_tag '/assets/restaurant2.jpg' %></div>
       <div class="activity_image"><%= image_tag '/assets/restaurant3.jpg' %></div>

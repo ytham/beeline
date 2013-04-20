@@ -1,0 +1,15 @@
+<%= render 'header' %>
+
+<center>
+<h1>MY VOUCHERS</h1><br />
+
+  <% @all_carts.each do |a| %>
+      <%= link_to a.activity do %>
+        <div class="my_activity_box">
+          <div class="my_activity_image"><%= image_tag a.activity.image %></div>
+          <div class="my_info_overlay"><%= a.activity.name %></div>
+        </div>
+      <% end %>
+  <% end %>
+
+</center>
