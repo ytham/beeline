@@ -1,11 +1,11 @@
 <div class="cartbutton_wrapper">
   <% if current_user.carts.where(activity_id: @activity.id).present? %>
     <div class="cartbutton cart_purchased" %>
-      Purchased
+      Reserved
     </div>
   <% else %>
     <%= link_to(controller: 'carts', action: 'create', id: @activity.id, method: 'post', remote: true) do %>
-      <div class="cartbutton cart_buy">$<%= @activity.price %></div>
+      <div class="cartbutton cart_buy">Reserve Now!</div>
     <% end %>
   <% end %>
 </div>
