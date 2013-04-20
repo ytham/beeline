@@ -1,11 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
 div {
 	padding: 0px;
 	margin: 0px;
 }
 .row {
-	background-color: #00ff00;
+	background-color: #222222;
 	padding: 0px;
 	margin: 0px;
+	margin-bottom: 30px;
+	padding-bottom: 12px;
 }
 
 .columns {
@@ -20,10 +28,37 @@ div {
 
 .horizontal_section {
 	margin: 0px;
-	background-color: #ff0000;
-	padding: 10px;
-	height: 30px;
+	background-color: #121212;
+	padding: 12px 6px 12px 6px;
+	height: 204px;
 	width: 100%;
-	overflow-x: scroll;
+	overflow-x: auto;
 	overflow-y: hidden;
+	white-space: nowrap;
+}
+
+.activity_image {
+	display: inline-block;
+	background-color: #000000;
+	margin: 0px 6px 0px 6px;
+	width: 94%;
+	height: 180px;
+	overflow-y: hidden;
+	img {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+.right {
+	text-align: right;
+}
+
+h1 {
+	font-weight: 100;
+	font-size: 5em;
+	color: #fff;
+	margin-top: 0px;
+	margin-bottom: -0.22em;
+	z-index: 2;
 }

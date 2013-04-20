@@ -1,19 +1,35 @@
-<h1>Listing reservations</h1>
-
-<div class="horizontal_section">
-  This is a horizontal section.  something something something something something something something.
+<div class="row">
+  <div class="small-12 columns">
+    <h1>Brunch</h1>
+    <div class="horizontal_section">
+      This is a horizontal section.  something something something something something something something.
+    </div>
+  </div>
 </div>
 
+<div class="row">
+  <div class="small-12 columns">
+    <h1>Dayclubs</h1>
+    <div class="horizontal_section">
+      This is a horizontal section.  something something something something something something something.
+    </div>
+  </div>
+</div>
 
-<% @reservations.each do |reservation| %>
-  <tr>
-    <td><%= link_to 'Show', reservation %></td>
-    <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
-    <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<div class="row">
+  <div class="small-12 columns">
+    <h1>Dinner</h1>
+    <div class="horizontal_section">
+      This is a horizontal section.  something something something something something something something.
+    </div>
+  </div>
+</div>
 
-<br />
-
-<%= link_to 'New Reservation', new_reservation_path %>
+<div class="row">
+  <div class="small-12 columns">
+    <h1>Nightclubs</h1>
+    <div class="horizontal_section">
+      This is a horizontal section.  something something something something something something something.
+    </div>
+  </div>
+</div>

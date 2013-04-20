@@ -1,5 +1,7 @@
 // Required global settings and mixins for Foundation
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
 @import "foundation/foundation-global";
+
 
 // Settings file to override Foundation variables
 
@@ -17,7 +19,7 @@
 // We use these to control various global styles
 $body-bg: #000;
 $body-font-color: #aaa;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: 'Open Sans', sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
