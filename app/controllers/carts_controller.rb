@@ -5,11 +5,11 @@ class CartsController < ApplicationController
     @cart = current_user.carts.create(user_id: current_user.id, activity_id: params[:id])
     if @cart.save
       respond_to do |format|
-        format.js
+        format.html
       end
     else
       respond_to do |format|
-        format.js
+        format.html
       end
     end
   end

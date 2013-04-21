@@ -4,7 +4,7 @@
       Reserved
     </div>
   <% else %>
-    <%= link_to(controller: 'carts', action: 'create', id: @activity.id, method: 'post', remote: true) do %>
+    <%= link_to(controller: 'carts', action: 'create', id: @activity.id, method: 'post') do %>
       <div class="cartbutton cart_buy">Reserve Now!</div>
     <% end %>
   <% end %>
